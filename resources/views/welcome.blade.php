@@ -58,6 +58,11 @@
 <div class="author-image "><img class="w3-hover-sepia" src="img/mypic.png" alt=""></div>
 </div>
 <div class="col-md-9">
+
+        @if (Session::has('successmsg'))
+        <div class="alert alert-success">{{ Session::get('successmsg') }}</div>
+        @endif
+
 <h2 class="w3-text-yellow w3-cursive w3-hover-zoom">SHERIFFDEEN, ADIGUN FASASI</h2>
 <p>I'm an experienced <em> software engineer</em>, who constantly seeks out <em>innovative solutions</em> to everyday problems. </em></p>
 <div class="main-btn"><a class="w3-round w3-button w3-yellow w3-text-black" href="#2">Read More</a></div>
@@ -396,7 +401,8 @@ Aside the above, it will also interest you that I am a good team player and love
 </div>
 </div>
 <div class="col-md-6">
-<form id="contact" action="" method="post">
+<form id="contact" action="store" method="post">
+    @csrf
 <div class="row">
 <div class="col-md-12">
 <fieldset>
