@@ -20,6 +20,7 @@ import {
 } from "react-icons/lu";
 
 export default function Projects() {
+  const ExternalIcon = LuExternalLink as any;
   const projects = [
     {
       title: "Daily Contribution Engine",
@@ -131,7 +132,7 @@ export default function Projects() {
                         gap={2}
                         _hover={{ color: "blue.400" }}
                       >
-                        {project.title} <LuExternalLink size={18} />
+                        {project.title} <ExternalIcon size={18} />
                       </Link>
                     ) : (
                       project.title

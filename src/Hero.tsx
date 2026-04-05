@@ -13,6 +13,9 @@ import { Button } from "./components/ui/button";
 import { LuShieldCheck, LuCode, LuArrowRight } from "react-icons/lu";
 
 export default function Hero() {
+  const ArrowIcon = LuArrowRight as any;
+  const ShieldIcon = LuShieldCheck as any;
+  const CodeIcon = LuCode as any;
   return (
     <Box
       id="home"
@@ -112,7 +115,8 @@ export default function Hero() {
                 borderRadius="full"
               >
                 <a href="#projects">
-                  View Case Studies {(<LuArrowRight />) as any}
+                  View Case Studies
+                  <ArrowIcon />
                 </a>
               </Button>
               <Button
@@ -174,7 +178,7 @@ export default function Hero() {
                     borderRadius="xl"
                     color="blue.500"
                   >
-                    {(<LuShieldCheck size={24} />) as any}
+                    <ShieldIcon size={24} />
                   </Box>
                   <Box>
                     <Text fontWeight="bold" fontSize="sm">
@@ -193,7 +197,7 @@ export default function Hero() {
                     borderRadius="xl"
                     color="blue.500"
                   >
-                    {(<LuCode size={24} />) as any}
+                    <CodeIcon size={24} />
                   </Box>
                   <Box>
                     <Text fontWeight="bold" fontSize="sm">

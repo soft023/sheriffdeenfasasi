@@ -71,7 +71,7 @@ export default function Footer() {
                 color="gray.400"
                 _hover={{ color: "blue.500" }}
               >
-                <Icon as={FaGithub} boxSize={5} />
+                <Icon as={FaGithub as any} boxSize={5} />
               </Link>
             </HStack>
           </Flex>

@@ -89,7 +89,7 @@ export default function Skills() {
                 transition="all 0.3s"
               >
                 <Stack gap={4}>
-                  <Icon as={set.icon} boxSize={8} color="blue.500" />
+                  <Icon as={set.icon as any} boxSize={8} color="blue.500" />
                   <Box>
                     <Heading size="md" mb={2}>
                       {set.title}
