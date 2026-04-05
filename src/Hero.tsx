@@ -7,7 +7,6 @@ import {
   Badge,
   Flex,
   HStack,
-  Icon,
 } from "@chakra-ui/react";
 import { Button } from "./components/ui/button";
 import { LuShieldCheck, LuCode, LuArrowRight } from "react-icons/lu";
