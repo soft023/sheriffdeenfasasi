@@ -112,7 +112,7 @@ export default function Hero() {
                 borderRadius="full"
               >
                 <a href="#projects">
-                  View Case Studies <LuArrowRight />
+                  View Case Studies {(<LuArrowRight />) as any}
                 </a>
               </Button>
               <Button
@@ -174,7 +174,7 @@ export default function Hero() {
                     borderRadius="xl"
                     color="blue.500"
                   >
-                    <LuShieldCheck size={24} />
+                    {(<LuShieldCheck size={24} />) as any}
                   </Box>
                   <Box>
                     <Text fontWeight="bold" fontSize="sm">
@@ -193,7 +193,7 @@ export default function Hero() {
                     borderRadius="xl"
                     color="blue.500"
                   >
-                    <LuCode size={24} />
+                    {(<LuCode size={24} />) as any}
                   </Box>
                   <Box>
                     <Text fontWeight="bold" fontSize="sm">

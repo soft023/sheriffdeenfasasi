@@ -108,7 +108,7 @@ export default function Projects() {
                     borderRadius="xl"
                     color="blue.500"
                   >
-                    <Icon as={project.icon} boxSize={6} />
+                    <Icon as={project.icon as any} boxSize={6} />
                   </Box>
                   <Badge
                     variant="outline"

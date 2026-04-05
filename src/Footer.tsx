@@ -63,7 +63,7 @@ export default function Footer() {
                 color="gray.400"
                 _hover={{ color: "blue.500" }}
               >
-                <Icon as={FaLinkedin} boxSize={5} />
+                <Icon as={FaLinkedin as any} boxSize={5} />
               </Link>
               <Link
                 href="https://github.com/soft023"
