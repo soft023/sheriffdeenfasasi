@@ -7,27 +7,30 @@ import {
   Badge,
   Flex,
   HStack,
+  VStack,
 } from "@chakra-ui/react";
 import { Button } from "./components/ui/button";
 import { LuShieldCheck, LuCode, LuArrowRight } from "react-icons/lu";
 
 export default function Hero() {
+  // TypeScript Fix for Icons
   const ArrowIcon = LuArrowRight as any;
   const ShieldIcon = LuShieldCheck as any;
   const CodeIcon = LuCode as any;
+
   return (
     <Box
       id="home"
       bg="black"
       color="white"
-      minH={{ base: "auto", lg: "100dvh" }} // Dynamic viewport height for mobile
-      py={{ base: "120px", lg: "0" }} // Extra padding for mobile navbar clearance
+      minH={{ base: "auto", lg: "100dvh" }}
+      py={{ base: "120px", lg: "0" }}
       w="100%"
       display="flex"
       alignItems="center"
       position="relative"
       overflow="hidden"
-      pt={{ base: "80px", lg: "0" }} // Specific safety offset for the fixed navbar
+      pt={{ base: "80px", lg: "0" }}
     >
       {/* Background Architectural Glow */}
       <Box
@@ -114,8 +117,7 @@ export default function Hero() {
                 borderRadius="full"
               >
                 <a href="#projects">
-                  View Case Studies
-                  <ArrowIcon />
+                  View Case Studies <ArrowIcon />
                 </a>
               </Button>
               <Button
@@ -132,29 +134,31 @@ export default function Hero() {
             </Flex>
           </Stack>
 
-          {/* Right Side: Credential Vault Card */}
+          {/* Right Side: Credential Vault Card (Centered Content) */}
           <Box
             flex="0.8"
             w="full"
-            p={{ base: 6, md: 8 }}
+            p={{ base: 8, md: 10 }}
             bg="gray.900/30"
             borderRadius="3xl"
             border="1px solid"
             borderColor="gray.800"
             backdropFilter="blur(10px)"
           >
-            <Stack gap={8}>
-              <Box>
+            <Stack gap={10} align="center" width="full">
+              {/* Credentials Section */}
+              <Box width="full">
                 <Text
                   fontSize="xs"
                   fontWeight="bold"
                   color="blue.500"
                   mb={4}
                   letterSpacing="widest"
+                  textAlign="center"
                 >
                   PROFESSIONAL CREDENTIALS
                 </Text>
-                <HStack gap={2} flexWrap="wrap">
+                <HStack gap={2} flexWrap="wrap" justify="center">
                   {["B.TECH (HONS)", "MBA", "DCP", "CFE"].map((tag) => (
                     <Badge
                       key={tag}
@@ -162,6 +166,7 @@ export default function Hero() {
                       colorPalette="blue"
                       px={3}
                       color="white"
+                      borderRadius="md"
                     >
                       {tag}
                     </Badge>
@@ -169,8 +174,9 @@ export default function Hero() {
                 </HStack>
               </Box>
 
-              <Stack gap={6}>
-                <HStack gap={4} align="start">
+              {/* Services Section */}
+              <Stack gap={8} width="full" align="center">
+                <VStack gap={3} align="center" textAlign="center">
                   <Box
                     p={2.5}
                     bg="blue.500/10"
@@ -187,9 +193,9 @@ export default function Hero() {
                       Enforcing Global Compliance Standards
                     </Text>
                   </Box>
-                </HStack>
+                </VStack>
 
-                <HStack gap={4} align="start">
+                <VStack gap={3} align="center" textAlign="center">
                   <Box
                     p={2.5}
                     bg="blue.500/10"
@@ -206,11 +212,17 @@ export default function Hero() {
                       Financial & Media Process Automation
                     </Text>
                   </Box>
-                </HStack>
+                </VStack>
               </Stack>
 
-              <Box pt={4} borderTop="1px solid" borderColor="gray.800">
-                <HStack gap={2} flexWrap="wrap">
+              {/* Bottom Tags */}
+              <Box
+                pt={6}
+                borderTop="1px solid"
+                borderColor="gray.800"
+                width="full"
+              >
+                <HStack gap={2} justify="center" flexWrap="wrap">
                   <Badge variant="subtle" colorPalette="blue" size="sm">
                     Process Automation
                   </Badge>
